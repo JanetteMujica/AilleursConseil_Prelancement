@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 import Couche from '../assets/couche.png';
@@ -17,7 +17,7 @@ const Footer = () => {
 	const emailValidation = () => {
 		const regEx = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
 		if (regEx.test(email)) {
-			setMessage('Merci =)');
+			setMessage('Merci =) Vous recevrez un courriel de confirmation.');
 		} else if (!regEx.test(email)) {
 			setMessage(
 				'Invalide. Les courriels ont le format suivant: usager@domaine.com'
@@ -37,7 +37,7 @@ const Footer = () => {
 		emailjs
 			.sendForm(
 				'service_npwa0nc',
-				'service_npwa0nc',
+				'template_4mlscme',
 				form.current,
 				'YchMfkccv_yEaO1uI'
 			)
@@ -51,31 +51,9 @@ const Footer = () => {
 			);
 	};
 
-	// reload state
-	/* 	const handleSubmit = (e) => {
-		e.preventDefault();
-
-		const requestOptions = {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({
-				email,
-			}),
-		};
-
-		fetch('/emailListLaunch', requestOptions)
-			.then((response) => response.json())
-			.then((data) => {
-				setEmail('');
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	};
- */
-	/* 	const handleChange = (e) => {
+	const handleChange = (e) => {
 		setEmail(e.target.value);
-	}; */
+	};
 
 	return (
 		<>
@@ -86,13 +64,13 @@ const Footer = () => {
 						placeholder='Courriel'
 						name='user_email'
 						value={email}
-						/* 						onChange={(e) => {
+						onChange={(e) => {
 							handleChange(e);
-						}} */
+						}}
 					/>
 
 					<ButtonWrapper>
-						<Button type='submit' onClick={emailValidation}>
+						<Button type='submit' onClick={emailValidation} value='Send'>
 							REJOIGNEZ
 						</Button>
 					</ButtonWrapper>
@@ -105,7 +83,6 @@ const Footer = () => {
 					<FirstSection>
 						<SectionDate>
 							<Date>Lancement en juin 2023</Date>
-							{/* <Rejoignez>Rejoignez la liste de diffusion</Rejoignez> */}
 
 							<Reussir>Rejoignez la liste de diffusion</Reussir>
 						</SectionDate>
