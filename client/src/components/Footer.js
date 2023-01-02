@@ -7,10 +7,12 @@ import Attribution from '../assets/attribution.png';
 import CreativeCommon from '../assets/common.png';
 import NonCommercial from '../assets/noCommercialUse.png';
 import { device } from '../components/MediaQueries';
+import emailjs from '@emailjs/browser';
 
 const Footer = () => {
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
+	const form = useRef();
 
 	const emailValidation = () => {
 		const regEx = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
@@ -20,7 +22,7 @@ const Footer = () => {
 			setMessage(
 				'Invalide. Les courriels ont le format suivant: usager@domaine.com'
 			);
-		} else if (email != '') {
+		} else if (email !== '') {
 			setMessage(
 				'Invalide. Les courriels ont le format suivant: usager@domaine.com'
 			);
@@ -28,8 +30,29 @@ const Footer = () => {
 			setMessage('');
 		}
 	};
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				'service_npwa0nc',
+				'service_npwa0nc',
+				form.current,
+				'YchMfkccv_yEaO1uI'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+	};
+
 	// reload state
-	const handleSubmit = (e) => {
+	/* 	const handleSubmit = (e) => {
 		e.preventDefault();
 
 		const requestOptions = {
@@ -49,26 +72,23 @@ const Footer = () => {
 				console.log(error);
 			});
 	};
-
-	const handleChange = (e) => {
+ */
+	/* 	const handleChange = (e) => {
 		setEmail(e.target.value);
-	};
+	}; */
 
 	return (
 		<>
 			<FormWrapper>
-				<Form
-					onSubmit={(e) => {
-						handleSubmit(e);
-					}}
-				>
+				<form ref={form} onSubmit={sendEmail}>
 					<input
 						type='email'
 						placeholder='Courriel'
+						name='user_email'
 						value={email}
-						onChange={(e) => {
+						/* 						onChange={(e) => {
 							handleChange(e);
-						}}
+						}} */
 					/>
 
 					<ButtonWrapper>
@@ -77,7 +97,7 @@ const Footer = () => {
 						</Button>
 					</ButtonWrapper>
 					<Message>{message}</Message>
-				</Form>
+				</form>
 			</FormWrapper>
 
 			<WrapperBlue>
@@ -235,17 +255,17 @@ const FormWrapper = styled.div`
 		bottom: -343px;
 		left: 193px;
 	}
-`;
 
-const Form = styled.form`
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	gap: 16px;
-	margin-left: 16px;
-	margin-right: 16px;
+	.form {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 16px;
+		margin-left: 16px;
+		margin-right: 16px;
+	}
 
-	input {
+	.input {
 		width: 100%;
 		height: 35px;
 		z-index: 1000;
