@@ -189,23 +189,9 @@ const Date = styled.div`
 	font-size: 1.6em;
 	z-index: 1000;
 	position: absolute;
-	top: 99.6px;
+	top: 80.6px;
 	left: 16px;
 `;
-
-/* const Rejoignez = styled.div`
-	max-width: 300px;
-	margin-top: 1em;
-	z-index: 1000;
-	position: absolute;
-	top: 115.6px;
-	left: 16px;
-
-	@media ${device.laptop} {
-		top: 125.6px;
-		max-width: 400px;
-	}
-`; */
 
 const Reussir = styled.div`
 	max-width: 300px;
@@ -214,7 +200,7 @@ const Reussir = styled.div`
 	font-size: 1em;
 	z-index: 1000;
 	position: absolute;
-	top: 132.6px;
+	top: 122.6px;
 	left: 16px;
 	color: #fada80;
 
@@ -226,14 +212,14 @@ const Reussir = styled.div`
 const FormWrapper = styled.div`
 	position: relative;
 	z-index: 3000;
-	bottom: -262px;
+	bottom: -252px;
 	@media ${device.laptop} {
 		z-index: 3000;
 		bottom: -343px;
 		left: 193px;
 	}
 
-	.form {
+	form {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -242,7 +228,7 @@ const FormWrapper = styled.div`
 		margin-right: 16px;
 	}
 
-	.input {
+	input {
 		width: 100%;
 		height: 35px;
 		z-index: 1000;
@@ -272,7 +258,6 @@ const Button = styled.button`
 
 	&:hover {
 		background-color: var(--green);
-
 		color: ${(props) => (props.disabled ? '#FFFAEA' : '#FFFAEA')};
 		background-color: ${(props) =>
 			props.disabled ? 'var(--darkgrey)' : 'var(--green);'};

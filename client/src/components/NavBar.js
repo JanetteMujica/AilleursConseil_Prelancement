@@ -110,41 +110,37 @@ const BeigeUnderWrapper = styled.div`
 	margin: 0;
 
 	@media ${device.mobileS} {
-		height: 180px;
+		height: height: 175px;
 	}
 
 	@media ${device.mobileM} {
-		height: 234px;
+		height: 175px;
 	}
 
 	@media ${device.mobileL} {
-		height: 234px;
-	}
+		height: 175px;
+	};
 
-	// 20px de marge de chaque coté
 	@media ${device.tablet} {
-		height: 168px;
-	}
+		height: 100px;
+	};
 
-	// 40px de marge de chaque coté
 	@media ${device.laptop} {
 		height: 120px;
 	}
 
-	// 60px de marge de chaque côté
 	@media ${device.laptopL} {
-		height: 120px;
-	}
+		height: 150px;
+	};
 
 	// 120px de marge de chaque côté
 	@media ${device.desktop} {
-	} ;
+	};
 `;
 
 const NavWrapper = styled.div`
 	padding: 1em;
-	max-width: 100%;
-	margin-bottom: em;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -166,43 +162,29 @@ const NavWrapper = styled.div`
 		}
 	}
 
-	@media ${device.mobileS} {
-		max-width: 320px;
-	}
-
-	@media ${device.mobileM} {
-		max-width: 375px;
-	}
-
-	@media ${device.mobileL} {
-		max-width: 425px;
-	}
-
-	// 20px de marge de chaque coté
 	@media ${device.tablet} {
-		max-width: 728px;
+		flex-wrap: nowrap;
 	}
 
-	// 10px de marge de chaque coté
 	@media ${device.laptop} {
-		max-width: 1024px;
-		margin-left: 175px;
-	}
+		padding-top: 2em;
+		padding-left: 7em;
+		padding-right: 7em;
 
-	// 60px de marge de chaque côté
-	@media ${device.laptopL} {
-		max-width: 13204px;
-	}
+		@media ${device.laptopL} {
+			padding-left: 13em;
+			padding-right: 13em;
+		}
 
-	// 120px de marge de chaque côté
-	@media ${device.desktop} {
-		max-width: 2320px;
-	} ;
+		@media ${device.desktop} {
+			padding-left: 20em;
+			padding-right: 20em;
+		}
+	}
 `;
 
 const SecondSection = styled.section`
-	display: block;
-	/* 	margin-right: 3em; */
+	width: 100%;
 `;
 
 const Logo = styled.div`
@@ -253,6 +235,9 @@ const Nav = styled.nav`
 	flex-direction: row;
 	gap: 1em;
 	margin-bottom: 1em;
+	@media ${device.mobileM} {
+		justify-content: flex-end;
+	}
 `;
 
 const Page = styled.a`
@@ -268,4 +253,8 @@ const ModuleNav = styled.a`
 	font-size: 0.8em;
 	color: var(--lightgrey);
 	margin-bottom: 1em;
+
+	@media ${device.mobileM} {
+		justify-content: flex-end;
+	}
 `;
