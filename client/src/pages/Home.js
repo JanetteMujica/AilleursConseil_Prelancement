@@ -12,7 +12,6 @@ const Home = () => {
 		<>
 			<Wrapper>
 				<Titre>Réussir le démarrage d'une communauté de pratique</Titre>
-
 				<RightSection>
 					<Introduction>
 						<p>
@@ -29,19 +28,20 @@ const Home = () => {
 
 					<Button to='/programme'>APERÇU DU PROGRAMME</Button>
 				</RightSection>
-
-				<BdSection>
-					<img src={BdOne} />
-					<img src={BdTwo} />
-					<img src={BdThree} />
-					<img src={BdFour} />
-				</BdSection>
 			</Wrapper>
+
+			<BdSection>
+				<img src={BdOne} />
+				<img src={BdTwo} />
+				<img src={BdThree} />
+				<img src={BdFour} />
+			</BdSection>
 		</>
 	);
 };
 
 export default Home;
+
 const Wrapper = styled.section`
 	display: flex;
 	flex-direction: row;
@@ -51,58 +51,55 @@ const Wrapper = styled.section`
 	gap: 1.5em;
 	align-items: flex-start;
 	margin-top: 13em;
-	/* margin-bottom: 57.6px; */
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 
 	@media ${device.mobileS} {
-		max-width: 320px;
 	}
 
 	@media ${device.mobileM} {
-		max-width: 375px;
 	}
 
 	@media ${device.mobileL} {
-		max-width: 425px;
 	}
 
-	// 20px de marge de chaque coté
 	@media ${device.tablet} {
-		max-width: 728px;
-	}
-
-	// 40px de marge de chaque coté
-	@media ${device.laptop} {
-		max-width: 1024px;
 		margin-top: 10em;
-		margin-bottom: 5em;
-		margin-left: 180px;
+		padding-left: 2em;
+		padding-right: 2em;
+		gap: 2em;
 	}
 
-	// 60px de marge de chaque côté
-	@media ${device.laptopL} {
-		max-width: 13204px;
-	}
-
-	// 120px de marge de chaque côté
-	@media ${device.desktop} {
-		max-width: 2320px;
-	} ;
-`;
-
-const RightSection = styled.div`
-	margin-bottom: 1em;
 	@media ${device.laptop} {
-		width: 50%;
+		margin-top: 12em;
+		padding-left: 7em;
+		padding-right: 7em;
+	}
+
+	@media ${device.laptopL} {
+	}
+
+	@media ${device.desktop} {
 	}
 `;
 
 const Titre = styled.h1`
+	@media ${device.tablet} {
+		width: 290px;
+	}
 	@media ${device.laptop} {
 		font-size: 1.6em;
-		width: 290px;
+	}
+`;
+
+const RightSection = styled.div`
+	margin-bottom: 1em;
+	@media ${device.tablet} {
+		width: 50%;
+	}
+
+	@media ${device.laptop} {
 	}
 `;
 
@@ -112,9 +109,13 @@ const Introduction = styled.p`
 	gap: 1em;
 	color: var(--lightgrey);
 	margin-bottom: 2em;
+
+	@media ${device.tablet} {
+	}
 	@media ${device.laptop} {
 		width: 575px;
 		margin-bottom: 2em;
+		padding-right: 7em;
 	}
 `;
 
@@ -137,9 +138,38 @@ const Button = styled(Link)`
 `;
 
 const BdSection = styled.section`
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: 4em;
+	gap: 1em;
+	padding-right: 1em;
+	padding-left: 1em;
+
+	@media ${device.tablet} {
+		padding-right: 2em;
+		padding-left: 2em;
+		gap: 2em;
+	}
+
+	@media ${device.laptop} {
+		margin-top: 7em;
+		padding-right: 7em;
+		padding-left: 7em;
+		padding-bottom: 4em;
+		gap: 3em;
+	}
+
 	img {
-		margin-top: 1em;
 		width: 100%;
 		height: auto;
+
+		@media ${device.tablet} {
+			width: 415px;
+		}
+
+		@media ${device.laptop} {
+			width: 460px;
+		}
 	}
 `;

@@ -86,7 +86,7 @@ export default createGlobalStyle`
 
 	// 120px de marge de chaque côté
 	@media ${device.desktop} {
-    font-size: 21px;
+    font-size: 24px;
 	}}
 
 /* @media (min-width: 1366px) {

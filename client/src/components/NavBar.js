@@ -110,7 +110,7 @@ const BeigeUnderWrapper = styled.div`
 	margin: 0;
 
 	@media ${device.mobileS} {
-		height: height: 175px;
+		height: 175px;
 	}
 
 	@media ${device.mobileM} {
@@ -119,23 +119,23 @@ const BeigeUnderWrapper = styled.div`
 
 	@media ${device.mobileL} {
 		height: 175px;
-	};
+	}
 
 	@media ${device.tablet} {
-		height: 100px;
-	};
-
-	@media ${device.laptop} {
 		height: 120px;
 	}
 
-	@media ${device.laptopL} {
-		height: 150px;
-	};
+	@media ${device.laptop} {
+		height: 130px;
+	}
 
-	// 120px de marge de chaque côté
+	@media ${device.laptopL} {
+		height: 140px;
+	}
+
 	@media ${device.desktop} {
-	};
+		height: 140px;
+	} ;
 `;
 
 const NavWrapper = styled.div`
@@ -164,6 +164,9 @@ const NavWrapper = styled.div`
 
 	@media ${device.tablet} {
 		flex-wrap: nowrap;
+		padding-top: 2em;
+		padding-left: 2em;
+		padding-right: 2em;
 	}
 
 	@media ${device.laptop} {
