@@ -259,5 +259,14 @@ const ModuleNav = styled.a`
 
 	@media ${device.mobileM} {
 		justify-content: flex-end;
+		padding-left: 40px;
+	}
+
+	@media ${device.mobileL} {
+		padding-left: 140px;
+	}
+
+	@media ${device.tablet} {
+		padding-left: 0px;
 	}
 `;
