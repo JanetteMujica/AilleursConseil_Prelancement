@@ -134,7 +134,7 @@ const BeigeUnderWrapper = styled.div`
 	}
 
 	@media ${device.desktop} {
-		height: 140px;
+		height: 200px;
 	} ;
 `;
 
@@ -180,6 +180,7 @@ const NavWrapper = styled.div`
 		}
 
 		@media ${device.desktop} {
+			padding-top: 3em;
 			padding-left: 20em;
 			padding-right: 20em;
 		}

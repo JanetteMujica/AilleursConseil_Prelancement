@@ -137,11 +137,15 @@ export default Footer;
 
 const WrapperBlue = styled.div`
 	position: relative;
-	height: 405px;
+	height: 450px;
 	background-color: #4083bb;
 	z-index: -1000;
 	@media ${device.laptop} {
-		height: 440px;
+		height: 420px;
+	}
+
+	@media ${device.laptopL} {
+		height: 500px;
 	}
 `;
 
@@ -153,16 +157,48 @@ const Wrapper = styled.section`
 	flex-direction: column;
 	flex-wrap: wrap;
 
-	img {
-		position: absolute;
-		z-index: 0;
-		bottom: -30px;
-		right: 0;
+	@media ${device.tablet} {
+		margin-left: 1em;
 	}
 
 	@media ${device.laptop} {
-		max-width: 1100px;
-		margin-left: 175px;
+		margin-left: 6em;
+	}
+
+	@media ${device.laptopL} {
+		margin-left: 12em;
+	}
+
+	@media ${device.desktop} {
+		margin-left: 19em;
+	}
+
+	img {
+		position: absolute;
+		z-index: 0;
+		bottom: -60px;
+		right: 0;
+
+		@media ${device.mobileM} {
+			right: 1em;
+		}
+		@media ${device.tablet} {
+			right: 2em;
+		}
+
+		@media ${device.laptop} {
+			right: 6em;
+			bottom: -50px;
+		}
+
+		@media ${device.laptopL} {
+			right: 12em;
+			bottom: -120px;
+		}
+
+		@media ${device.desktop} {
+			right: 19em;
+		}
 	}
 `;
 
@@ -171,7 +207,25 @@ const SecondSection = styled.section`
 	img {
 		width: 320px;
 	}
+
+	@media ${device.tablet} {
+		img {
+			width: 450px;
+		}
+	}
 	@media ${device.laptop} {
+		img {
+			width: 450px;
+		}
+	}
+
+	@media ${device.laptopL} {
+		img {
+			width: 550px;
+		}
+	}
+
+	@media ${device.desktop} {
 		img {
 			width: 600px;
 		}
@@ -204,8 +258,8 @@ const Reussir = styled.div`
 	left: 16px;
 	color: #fada80;
 
-	@media ${device.laptop} {
-		top: 197.6px;
+	@media ${device.desktop} {
+		max-width: 400px;
 	}
 `;
 
@@ -213,10 +267,24 @@ const FormWrapper = styled.div`
 	position: relative;
 	z-index: 3000;
 	bottom: -252px;
+
+	@media ${device.tablet} {
+		bottom: -272px;
+		left: 1em;
+	}
+
 	@media ${device.laptop} {
-		z-index: 3000;
-		bottom: -343px;
-		left: 193px;
+		left: 6em;
+	}
+
+	@media ${device.laptopL} {
+		left: 12em;
+		bottom: -285px;
+	}
+
+	@media ${device.desktop} {
+		left: 19em;
+		bottom: -300px;
 	}
 
 	form {
@@ -239,10 +307,11 @@ const FormWrapper = styled.div`
 		&:focus {
 			border: 3px solid var(--red);
 		}
-	}
 
-	@media ${device.laptop} {
-		z-index: 3000;
+		@media ${device.tablet} {
+			height: 40px;
+			width: 400px;
+		}
 	}
 `;
 
@@ -271,16 +340,35 @@ const ButtonWrapper = styled.div`
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
-	/* gap: 30px; */
+
+	@media ${device.tablet} {
+		justify-content: flex-start;
+	}
 `;
 
 const Message = styled.div`
 	position: absolute;
-	width: 400px;
-	left: 0px;
-	bottom: -70px;
+	width: 320px;
+	left: 1em;
+	bottom: -45px;
 	color: #fffaea;
 	font-weight: 700;
+
+	@media ${device.mobileM} {
+		width: 375px;
+	}
+
+	@media ${device.mobileL} {
+		/* width: 375px; */
+	}
+
+	@media ${device.tablet} {
+		bottom: -55px;
+	}
+
+	@media ${device.desktop} {
+		width: 600px;
+	}
 `;
 
 const GreenSectionWrapper = styled.div`
@@ -299,9 +387,21 @@ const GreenSection = styled.div`
 	position: relative;
 	bottom: 0;
 	right: 0;
+
+	@media ${device.tablet} {
+		margin-left: 1em;
+	}
+
 	@media ${device.laptop} {
-		max-width: 1024px;
-		margin-left: 175px;
+		margin-left: 6em;
+	}
+
+	@media ${device.laptopL} {
+		margin-left: 12em;
+	}
+
+	@media ${device.desktop} {
+		margin-left: 19em;
 	}
 `;
 

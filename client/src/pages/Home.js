@@ -55,15 +55,6 @@ const Wrapper = styled.section`
 	margin-left: auto;
 	margin-right: auto;
 
-	@media ${device.mobileS} {
-	}
-
-	@media ${device.mobileM} {
-	}
-
-	@media ${device.mobileL} {
-	}
-
 	@media ${device.tablet} {
 		margin-top: 10em;
 		padding-left: 2em;
@@ -78,9 +69,16 @@ const Wrapper = styled.section`
 	}
 
 	@media ${device.laptopL} {
+		padding-left: 13em;
+		padding-right: 13em;
+		gap: 5em;
 	}
 
 	@media ${device.desktop} {
+		padding-left: 20em;
+		padding-right: 20em;
+		margin-top: 14em;
+		gap: 2em;
 	}
 `;
 
@@ -91,6 +89,16 @@ const Titre = styled.h1`
 	@media ${device.laptop} {
 		font-size: 1.6em;
 	}
+
+	@media ${device.laptopL} {
+		width: 340px;
+		font-size: 2em;
+	}
+
+	@media ${device.desktop} {
+		width: 700px;
+		font-size: 3em;
+	}
 `;
 
 const RightSection = styled.div`
@@ -99,7 +107,12 @@ const RightSection = styled.div`
 		width: 50%;
 	}
 
-	@media ${device.laptop} {
+	@media ${device.laptopL} {
+		font-size: 1em;
+	}
+
+	@media ${device.desktop} {
+		font-size: 1.7em;
 	}
 `;
 
@@ -112,10 +125,17 @@ const Introduction = styled.p`
 
 	@media ${device.tablet} {
 	}
+
 	@media ${device.laptop} {
-		width: 575px;
 		margin-bottom: 2em;
-		padding-right: 7em;
+	}
+
+	@media ${device.laptopL} {
+		margin-bottom: 2em;
+	}
+
+	@media ${device.desktop} {
+		margin-bottom: 2em;
 	}
 `;
 
@@ -160,6 +180,22 @@ const BdSection = styled.section`
 		gap: 3em;
 	}
 
+	@media ${device.laptopL} {
+		margin-top: 7em;
+		padding-right: 13em;
+		padding-left: 13em;
+		padding-bottom: 4em;
+		gap: 3em;
+	}
+
+	@media ${device.desktop} {
+		margin-top: 7em;
+		padding-right: 20em;
+		padding-left: 20em;
+		padding-bottom: 4em;
+		gap: 3em;
+	}
+
 	img {
 		width: 100%;
 		height: auto;
@@ -170,6 +206,14 @@ const BdSection = styled.section`
 
 		@media ${device.laptop} {
 			width: 460px;
+		}
+
+		@media ${device.laptopL} {
+			width: 600px;
+		}
+
+		@media ${device.desktop} {
+			width: 900px;
 		}
 	}
 `;

@@ -72,22 +72,33 @@ const Programme = () => {
 											<Titre>{module.module}</Titre>
 										</Numero>
 									</ModuleTitre>
-
-									<img
-										src={image}
-										alt={module.module}
-										onMouseOver={(e) => (e.currentTarget.src = imageGold)}
-										onMouseOut={(e) => (e.currentTarget.src = image)}
-									/>
 								</NavLink>
 
-								<SousTitre>OBJECTIF</SousTitre>
-								<div>{module.objectif}</div>
-								<Question>
-									{module.questions.map((question) => (
-										<li>{question}</li>
-									))}
-								</Question>
+								<TexteExplicatif>
+									<TexteExplicatifSection1>
+										<NavLink
+											key={module.titre}
+											to={`/programme/${module.titre}`}
+										>
+											<img
+												src={image}
+												alt={module.module}
+												onMouseOver={(e) => (e.currentTarget.src = imageGold)}
+												onMouseOut={(e) => (e.currentTarget.src = image)}
+											/>
+										</NavLink>
+									</TexteExplicatifSection1>
+
+									<TexteExplicatifSection2>
+										<SousTitre>OBJECTIF</SousTitre>
+										<div>{module.objectif}</div>
+										<Question>
+											{module.questions.map((question) => (
+												<li>{question}</li>
+											))}
+										</Question>
+									</TexteExplicatifSection2>
+								</TexteExplicatif>
 							</ModuleSection>
 						);
 					})}
@@ -132,11 +143,27 @@ const Wrapper = styled.section`
 	padding-right: 1em;
 	padding-bottom: 1em;
 
-	@media ${device.laptop} {
-		max-width: 1200px;
+	@media ${device.tablet} {
 		margin-top: 10em;
-		margin-bottom: 5em;
-		margin-left: 180px;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+	@media ${device.laptop} {
+		margin-top: 12em;
+		padding-left: 7em;
+		padding-right: 7em;
+	}
+
+	@media ${device.laptopL} {
+		padding-left: 13em;
+		padding-right: 13em;
+	}
+
+	@media ${device.desktop} {
+		padding-left: 20em;
+		padding-right: 20em;
+		margin-top: 14em;
 	}
 `;
 
@@ -148,8 +175,17 @@ const TitreSection = styled.section`
 
 const TitrePage = styled.h1`
 	font-weight: 700;
+
 	@media ${device.laptop} {
-		margin-bottom: 0.8em;
+		font-size: 1.6em;
+	}
+
+	@media ${device.laptopL} {
+		font-size: 2em;
+	}
+
+	@media ${device.desktop} {
+		font-size: 3em;
 	}
 `;
 
@@ -159,6 +195,9 @@ const Apropos = styled.section`
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 2em;
+
+	@media ${device.tablet} {
+	}
 `;
 
 const Introduction = styled.p`
@@ -168,8 +207,9 @@ const Introduction = styled.p`
 	color: var(--lightgrey);
 	margin-bottom: 1em;
 	width: 343px;
-	@media ${device.laptop} {
-		width: 500px;
+
+	@media ${device.tablet} {
+		width: 49%;
 	}
 `;
 
@@ -179,15 +219,16 @@ const Bold = styled.span`
 
 const BoldTitre = styled.span`
 	font-weight: 700;
-	@media ${device.laptop} {
-		font-size: 1.3em;
-	}
 `;
 
 const Table = styled.table`
 	color: var(--darkgrey);
 	font-weight: 700;
 	width: 450px;
+
+	@media ${device.tablet} {
+		width: 45%;
+	}
 
 	tr {
 		display: flex;
@@ -198,9 +239,6 @@ const Table = styled.table`
 
 	td {
 	}
-	@media ${device.laptop} {
-		margin-top: 45px;
-	}
 `;
 
 const ModuleSection = styled.section`
@@ -208,6 +246,22 @@ const ModuleSection = styled.section`
 		margin-top: 1em;
 		width: 100%;
 		height: auto;
+
+		@media ${device.tablet} {
+			width: 250px;
+		}
+
+		@media ${device.laptop} {
+			width: 250px;
+		}
+
+		@media ${device.laptopL} {
+			width: 250px;
+		}
+
+		@media ${device.desktop} {
+			width: 400px;
+		}
 	}
 `;
 
@@ -217,6 +271,10 @@ const ModuleTitre = styled.section`
 	flex-direction: column;
 	font-weight: 700;
 	align-items: baseline;
+
+	@media ${device.desktop} {
+		margin-bottom: 0.5em;
+	}
 `;
 
 const Numero = styled.section`
@@ -230,6 +288,23 @@ const Id = styled.div`
 `;
 const Titre = styled.div`
 	font-size: 2em;
+`;
+
+const TexteExplicatif = styled.section`
+	@media ${device.tablet} {
+		display: flex;
+		flex-direction: row;
+		gap: 2em;
+	}
+`;
+
+const TexteExplicatifSection1 = styled.section`
+	width: 25%;
+`;
+const TexteExplicatifSection2 = styled.section`
+	@media ${device.desktop} {
+		width: 720px;
+	}
 `;
 
 const SousTitre = styled.p`
@@ -247,9 +322,6 @@ const Question = styled.ul`
 
 	li {
 	}
-	@media ${device.laptop} {
-		font-size: 1.5em;
-	}
 `;
 
 const SectionPartenaire = styled.div`
@@ -258,6 +330,11 @@ const SectionPartenaire = styled.div`
 	padding-bottom: 3em;
 	margin-top: 6em;
 	margin-bottom: 0;
+
+	@media ${device.tablet} {
+		padding-left: 3em;
+		padding-right: 3em;
+	}
 
 	p {
 		padding-left: 1em;
@@ -268,7 +345,16 @@ const SectionPartenaire = styled.div`
 const PartenaireLogo = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+
+	@media ${device.tablet} {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 1em;
+	}
+
+	@media ${device.desktop} {
+		gap: 3em;
+	}
 `;
 
 const CepppLogo = styled.a`
@@ -312,4 +398,8 @@ const RuissLogo = styled.a`
 
 const Participants = styled.p`
 	margin-top: 1em;
+
+	@media ${device.desktop} {
+		max-width: 800px;
+	}
 `;
