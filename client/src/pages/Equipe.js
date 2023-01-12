@@ -36,10 +36,9 @@ const Equipe = () => {
 							Montréal et en développement web à Concordia.
 						</Bio>
 						<Bio>
-							J’étudie l’analytique d'affaires à HEC. Mon objectif est
-							d’élaborer des services qui sont bons pour les utilisateurs, les
-							organisations et la société fondés sur des processus de recherche
-							et cocréation.
+							J’étudie l’analytique d'affaires à HEC et les humanités numériques
+							à l'UdeM. Mon objectif est d’élaborer des services qui sont bons
+							pour les utilisateurs, les organisations et la société.
 						</Bio>
 						<LesLiens>
 							<a
@@ -47,7 +46,7 @@ const Equipe = () => {
 								target='_blank'
 								rel='noreferrer'
 							>
-								Ajoutez-moi sur linkedIn
+								Ajoutez-moi sur LinkedIn
 							</a>
 
 							<a
@@ -94,7 +93,7 @@ const Equipe = () => {
 								target='_blank'
 								rel='noreferrer'
 							>
-								Ajoutez-moi sur linkedIn
+								Ajoutez-moi sur LinkedIn
 							</a>
 
 							<a
@@ -119,11 +118,28 @@ const Wrapper = styled.div`
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 1em;
+
+	@media ${device.tablet} {
+		margin-top: 10em;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
 	@media ${device.laptop} {
-		margin-top: 9em;
-		margin-left: 200px;
-		padding-left: 0px;
-		padding-bottom: 3em;
+		margin-top: 12em;
+		padding-left: 7em;
+		padding-right: 7em;
+	}
+
+	@media ${device.laptopL} {
+		padding-left: 13em;
+		padding-right: 13em;
+	}
+
+	@media ${device.desktop} {
+		padding-left: 20em;
+		padding-right: 20em;
+		margin-top: 14em;
 	}
 `;
 

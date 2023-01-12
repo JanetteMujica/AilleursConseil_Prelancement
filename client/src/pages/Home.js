@@ -31,10 +31,16 @@ const Home = () => {
 			</Wrapper>
 
 			<BdSection>
-				<img src={BdOne} />
-				<img src={BdTwo} />
-				<img src={BdThree} />
-				<img src={BdFour} />
+				<img
+					src={BdOne}
+					alt="Tout le monde travaille en silos! Qu'est-ce qu'on peut faire?"
+				/>
+				<img src={BdTwo} alt='Facile! On démarre une communcauté de pratique' />
+				<img src={BdThree} alt='Bonne idée!' />
+				<img
+					src={BdFour}
+					alt="Oui, mais .. qu'est-ce qu'on faite pour que ça marche?"
+				/>
 			</BdSection>
 		</>
 	);
@@ -91,8 +97,8 @@ const Titre = styled.h1`
 	}
 
 	@media ${device.laptopL} {
-		width: 340px;
-		font-size: 2em;
+		width: 700px;
+		font-size: 3em;
 	}
 
 	@media ${device.desktop} {
@@ -107,8 +113,11 @@ const RightSection = styled.div`
 		width: 50%;
 	}
 
+	@media ${device.laptop} {
+		font-size: 1.6em;
+	}
 	@media ${device.laptopL} {
-		font-size: 1em;
+		font-size: 1.4em;
 	}
 
 	@media ${device.desktop} {

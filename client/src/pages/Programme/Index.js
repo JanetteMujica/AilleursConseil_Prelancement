@@ -198,6 +198,10 @@ const Apropos = styled.section`
 
 	@media ${device.tablet} {
 	}
+
+	@media ${device.laptop} {
+		gap: 3em;
+	}
 `;
 
 const Introduction = styled.p`
@@ -210,6 +214,10 @@ const Introduction = styled.p`
 
 	@media ${device.tablet} {
 		width: 49%;
+	}
+
+	@media ${device.laptop} {
+		padding-right: 2em;
 	}
 `;
 
@@ -300,8 +308,28 @@ const TexteExplicatif = styled.section`
 
 const TexteExplicatifSection1 = styled.section`
 	width: 25%;
+
+	@media ${device.tablet} {
+		width: 250px;
+	}
+
+	@media ${device.laptop} {
+		width: 250px;
+	}
+
+	@media ${device.laptopL} {
+		width: 250px;
+	}
+
+	@media ${device.desktop} {
+		width: 400px;
+	}
 `;
+
 const TexteExplicatifSection2 = styled.section`
+	@media ${device.laptop} {
+		width: 720px;
+	}
 	@media ${device.desktop} {
 		width: 720px;
 	}
@@ -352,7 +380,7 @@ const PartenaireLogo = styled.div`
 		gap: 1em;
 	}
 
-	@media ${device.desktop} {
+	@media ${device.laptop} {
 		gap: 3em;
 	}
 `;
@@ -364,6 +392,10 @@ const CepppLogo = styled.a`
 		height: auto;
 		padding-left: 1em;
 		padding-right: 1em;
+
+		@media ${device.laptop} {
+			width: 400px;
+		}
 	}
 `;
 
@@ -374,6 +406,10 @@ const SsaLogo = styled.a`
 		height: auto;
 		padding-left: 1em;
 		padding-right: 1em;
+
+		@media ${device.laptop} {
+			width: 300px;
+		}
 	}
 `;
 
@@ -383,6 +419,10 @@ const RisuqLogo = styled.a`
 		padding-left: 0.5em;
 		width: 180px;
 		height: auto;
+
+		@media ${device.laptop} {
+			width: 250px;
+		}
 	}
 `;
 
@@ -393,13 +433,17 @@ const RuissLogo = styled.a`
 		width: 240px;
 		height: auto;
 		padding-left: 0.5em;
+
+		@media ${device.laptop} {
+			width: 280px;
+		}
 	}
 `;
 
 const Participants = styled.p`
 	margin-top: 1em;
 
-	@media ${device.desktop} {
+	@media ${device.laptop} {
 		max-width: 800px;
 	}
 `;
