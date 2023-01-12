@@ -56,7 +56,7 @@ const Footer = () => {
 	};
 
 	return (
-		<>
+		<WholeWrapper>
 			<FormWrapper>
 				<form ref={form} onSubmit={sendEmail}>
 					<input
@@ -129,11 +129,13 @@ const Footer = () => {
 					</LicenseSection>
 				</GreenSection>
 			</GreenSectionWrapper>
-		</>
+		</WholeWrapper>
 	);
 };
 
 export default Footer;
+
+const WholeWrapper = styled.div``;
 
 const WrapperBlue = styled.div`
 	position: relative;
