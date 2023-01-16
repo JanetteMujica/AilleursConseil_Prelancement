@@ -97,8 +97,8 @@ const Titre = styled.h1`
 	}
 
 	@media ${device.laptopL} {
-		width: 700px;
-		font-size: 3em;
+		width: 440px;
+		font-size: 2em;
 	}
 
 	@media ${device.desktop} {
@@ -117,7 +117,7 @@ const RightSection = styled.div`
 		font-size: 1.6em;
 	}
 	@media ${device.laptopL} {
-		font-size: 1.4em;
+		font-size: 1em;
 	}
 
 	@media ${device.desktop} {
