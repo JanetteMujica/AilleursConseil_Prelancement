@@ -201,5 +201,5 @@ const LesLiens = styled.section`
 	font-weight: 700;
 	text-decoration: underline;
 	font-style: italic;
-	font-size: 1.5em;
+	font-size: 1em;
 `;
