@@ -97,7 +97,7 @@ const Titre = styled.h1`
 	}
 
 	@media ${device.laptopL} {
-		width: 440px;
+		width: 420px;
 		font-size: 2em;
 	}
 
