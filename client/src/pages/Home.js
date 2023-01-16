@@ -77,7 +77,7 @@ const Wrapper = styled.section`
 	@media ${device.laptopL} {
 		padding-left: 13em;
 		padding-right: 13em;
-		gap: 5em;
+		gap: 3em;
 	}
 
 	@media ${device.desktop} {
