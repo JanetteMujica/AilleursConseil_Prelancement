@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import LogoGoldPng from '../assets/LogoGoldPng.png';
 import LogoRedPng from '../assets/LogoRedPng.png';
 import { device } from '../components/MediaQueries';
-import { titles } from '../data';
 
 const NavBar = () => {
 	const [show, setShow] = useState(true);
@@ -37,13 +36,7 @@ const NavBar = () => {
 								onMouseOut={(e) => (e.currentTarget.src = LogoGoldPng)}
 							/>
 						</Link>
-						<TitreLogo>
-							Conseil en
-							<br />
-							apprentissage
-							<br />
-							collectif
-						</TitreLogo>
+						<TitreLogo>ailleurs.</TitreLogo>
 					</Logo>
 
 					<SecondSection>
@@ -76,21 +69,6 @@ const NavBar = () => {
 								<Page>équipe</Page>
 							</NavLink>
 						</Nav>
-						<ModuleNav>
-							{titles.map((title) => {
-								return (
-									<NavLink
-										key={title}
-										to={`/programme/${title}`}
-										style={({ isActive }) => ({
-											fontWeight: !isActive ? '400' : '700',
-										})}
-									>
-										<div>{title}</div>
-									</NavLink>
-								);
-							})}
-						</ModuleNav>
 					</SecondSection>
 				</NavWrapper>
 			</BeigeUnderWrapper>
@@ -110,31 +88,30 @@ const BeigeUnderWrapper = styled.div`
 	margin: 0;
 
 	@media ${device.mobileS} {
-		height: 175px;
-	}
-
-	@media ${device.mobileM} {
-		height: 175px;
-	}
-
-	@media ${device.mobileL} {
-		height: 175px;
-	}
-
-	@media ${device.tablet} {
 		height: 120px;
 	}
 
+	@media ${device.mobileM} {
+		height: 120px;
+	}
+
+	@media ${device.mobileL} {
+		height: 120px;
+	}
+
+	@media ${device.tablet} {
+		height: 100px;
+	}
+
 	@media ${device.laptop} {
-		height: 130px;
+		height: 110px;
 	}
 
 	@media ${device.laptopL} {
-		height: 140px;
 	}
 
 	@media ${device.desktop} {
-		height: 200px;
+		height: 160px;
 	} ;
 `;
 
@@ -145,6 +122,7 @@ const NavWrapper = styled.div`
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 	position: fixed;
 	z-index: 2000;
 	top: 0;
@@ -194,6 +172,7 @@ const SecondSection = styled.section`
 const Logo = styled.div`
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	font-weight: 700;
 	gap: 0.5em;
 	margin-bottom: 1em;
@@ -247,27 +226,4 @@ const Nav = styled.nav`
 const Page = styled.a`
 	font-weight: 700;
 	color: var(--darkgrey);
-`;
-
-const ModuleNav = styled.a`
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 0.5em;
-	font-size: 0.8em;
-	color: var(--lightgrey);
-	margin-bottom: 1em;
-
-	@media ${device.mobileM} {
-		justify-content: flex-end;
-		padding-left: 40px;
-	}
-
-	@media ${device.mobileL} {
-		padding-left: 140px;
-	}
-
-	@media ${device.tablet} {
-		padding-left: 0px;
-	}
 `;

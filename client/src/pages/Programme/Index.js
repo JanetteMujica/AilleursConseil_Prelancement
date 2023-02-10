@@ -9,10 +9,27 @@ import Ceppp from '../../assets/ceppp.png';
 import Ruiss from '../../assets/ruiss.png';
 import Risuq from '../../assets/risuq.png';
 import Ssa from '../../assets/ssa.png';
+import { titles } from '../../data';
 
 const Programme = () => {
 	return (
 		<>
+			<BeigeModuleNav></BeigeModuleNav>
+			<ModuleNav>
+				{titles.map((title) => {
+					return (
+						<NavLink
+							key={title}
+							to={`/programme/${title}`}
+							style={({ isActive }) => ({
+								fontWeight: !isActive ? '400' : '700',
+							})}
+						>
+							<div>{title}</div>
+						</NavLink>
+					);
+				})}
+			</ModuleNav>{' '}
 			<Wrapper>
 				<TitreSection>
 					<TitrePage>
@@ -136,6 +153,71 @@ const Programme = () => {
 };
 
 export default Programme;
+
+const BeigeModuleNav = styled.div`
+	background-color: #fffaea;
+	position: fixed;
+	top: 50px;
+	z-index: 200;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+
+	@media ${device.mobileS} {
+		height: 125px;
+	}
+
+	@media ${device.mobileM} {
+		height: 125px;
+	}
+
+	@media ${device.mobileL} {
+		height: 125px;
+	}
+
+	@media ${device.tablet} {
+		height: 85px;
+	}
+
+	@media ${device.laptop} {
+		height: 95px;
+	}
+
+	@media ${device.laptopL} {
+	}
+
+	@media ${device.desktop} {
+	} ;
+`;
+
+const ModuleNav = styled.a`
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	font-size: 0.8em;
+	color: var(--lightgrey);
+	margin-bottom: 1em;
+	z-index: 10000;
+	margin-left: 1em;
+	margin-right: 1em;
+	position: fixed;
+	top: 120px;
+
+	@media ${device.mobileM} {
+	}
+
+	@media ${device.mobileL} {
+	}
+
+	@media ${device.tablet} {
+	}
+
+	@media ${device.tablet} {
+		margin-top: 60px;
+		padding-right: 7.5em;
+	}
+`;
 
 const Wrapper = styled.section`
 	margin-top: 13em;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Janette from '../assets/janette.png';
 import Codes from '../assets/codes.png';
@@ -10,6 +11,12 @@ const Equipe = () => {
 	return (
 		<>
 			<Wrapper>
+				<TitrePage>AILLEURS CONSEIL</TitrePage>
+				<Bio>
+					Nous vous amenons ailleurs en vous aidant à penser hors des modèles
+					établis <br></br>pour étendre l'horizon des possibles.
+				</Bio>
+
 				<TitrePage>ÉQUIPE</TitrePage>
 				<LesBios>
 					<section>
@@ -106,6 +113,21 @@ const Equipe = () => {
 						</LesLiens>
 					</section>
 				</LesBios>
+
+				<TitrePage>COLLABORATEURS</TitrePage>
+				<Bio>
+					Le programme
+					<Link to='/programme'>
+						<Italic> Réussir le démarrage d'une communauté de pratique </Italic>
+					</Link>
+					été conçu à l'aide d'un processus de coconstruction des connaissances.
+					Nous avons rassemblé un comité consultatif composé de cinq personnes
+					ayant une variété d'expériences en lien avec des communautés de
+					pratique dans le domaine de l'organisation des soins de santé. Mathieu
+					Bouchard a accompagné les membres de ce comité dans une série de six
+					séances mensuelles ayant pour but de valider et enrichir les éléments
+					de contenu qui composent ce programme.
+				</Bio>
 			</Wrapper>
 		</>
 	);
@@ -166,9 +188,15 @@ const LesBios = styled.div`
 	}
 `;
 
+const Italic = styled.span`
+	font-style: italic;
+	font-weight: bold;
+`;
+
 const TitrePage = styled.h1`
+	margin-top: 1em;
 	font-weight: 700;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.5em;
 `;
 
 const Intro = styled.div`
