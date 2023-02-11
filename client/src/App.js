@@ -5,6 +5,7 @@ import GlobalStyles from './components/GlobalStyles';
 import NavBar from './components/NavBar';
 import Equipe from './pages/Equipe';
 import Home from './pages/Home';
+import Pouvoirs from './pages/Pouvoirs';
 import Programme from './pages/Programme/Index';
 import Module from './pages/Programme/Module';
 import Footer from './components/Footer';
@@ -19,6 +20,7 @@ const App = () => {
 				<Route path='/programme' element={<Programme />} />
 				<Route path='/programme/:title' element={<Module />} />
 				<Route path='/equipe' element={<Equipe />} />
+				<Route path='/pouvoirs' element={<Pouvoirs />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>

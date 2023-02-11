@@ -11,11 +11,15 @@ const Equipe = () => {
 	return (
 		<>
 			<Wrapper>
-				<TitrePage>AILLEURS CONSEIL</TitrePage>
-				<Bio>
-					Nous vous amenons ailleurs en vous aidant à penser hors des modèles
-					établis <br></br>pour étendre l'horizon des possibles.
-				</Bio>
+				<TitrePage>AILLEURS</TitrePage>
+				<Para>
+					Nous soutenons les initiatives de praticiens et d'utilisateurs visant
+					à humaniser les services de santé et d'éducation.
+				</Para>
+				<Para>
+					Nous voulons aller ailleurs en pensant hors des modèles établis pour
+					étendre l'horizon des possibles.
+				</Para>
 
 				<TitrePage>ÉQUIPE</TitrePage>
 				<LesBios>
@@ -36,16 +40,23 @@ const Equipe = () => {
 							l'action.
 						</Statement>
 						<Bio>
-							Durant une douzaine d’année, j’ai optimisé la productivité de
-							dirigeants en tant qu’adjointe exécutive. J’entreprends une
-							réorientation de carrière visant à prioriser l’expérience
-							utilisateur. Je suis diplomée en gestion de l'innovation à HEC
-							Montréal et en développement web à Concordia.
+							Durant onze ans, j’ai optimisé la productivité de dirigeants en
+							jouant un rôle clé dans le succès des équipes auxquelles j’ai
+							appartenu. Ensuite, j’ai acquis des diplômes en gestion de
+							l'innovation à HEC Montréal ainsi qu’en développement web et
+							design UX à Concordia.
 						</Bio>
 						<Bio>
-							J’étudie l’analytique d'affaires à HEC et les humanités numériques
-							à l'UdeM. Mon objectif est d’élaborer des services qui sont bons
-							pour les utilisateurs, les organisations et la société.
+							En ces temps incertains, je crois que notre avenir mérite d’être
+							imaginé et créé. Je travaille à rendre accessible et faire
+							connaître du contenu de recherche pour soutenir de façon
+							décentralisée des praticiens à humaniser nos services de santé et
+							d’éducation.
+						</Bio>
+
+						<Bio>
+							Je poursuis présentement des études en humanités numérique à
+							l’UdeM et en analytique d’affaires à HEC Montréal.
 						</Bio>
 						<LesLiens>
 							<a
@@ -114,20 +125,25 @@ const Equipe = () => {
 					</section>
 				</LesBios>
 
-				<TitrePage>COLLABORATEURS</TitrePage>
-				<Bio>
+				<TitrePage>COMITÉ</TitrePage>
+				<Para>
 					Le programme
 					<Link to='/programme'>
 						<Italic> Réussir le démarrage d'une communauté de pratique </Italic>
 					</Link>
 					été conçu à l'aide d'un processus de coconstruction des connaissances.
-					Nous avons rassemblé un comité consultatif composé de cinq personnes
-					ayant une variété d'expériences en lien avec des communautés de
-					pratique dans le domaine de l'organisation des soins de santé. Mathieu
-					Bouchard a accompagné les membres de ce comité dans une série de six
-					séances mensuelles ayant pour but de valider et enrichir les éléments
-					de contenu qui composent ce programme.
-				</Bio>
+				</Para>
+				<Para>
+					Un comité consultatif composé de cinq personnes ayant une variété
+					d'expériences en lien avec des communautés de pratique dans le domaine
+					des soins de santé a été réuni.
+				</Para>
+
+				<Para>
+					Mathieu Bouchard a accompagné les membres de ce comité dans une série
+					de six séances ayant pour but de valider et enrichir les éléments de
+					contenu qui composent ce programme.
+				</Para>
 			</Wrapper>
 		</>
 	);
@@ -136,7 +152,7 @@ const Equipe = () => {
 export default Equipe;
 
 const Wrapper = styled.div`
-	margin-top: 13em;
+	margin-top: 11em;
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-bottom: 1em;
@@ -223,6 +239,10 @@ const Statement = styled.div`
 `;
 
 const Bio = styled.div``;
+
+const Para = styled.div`
+	margin-bottom: 1em;
+`;
 
 const LesLiens = styled.section`
 	margin-top: 1em;

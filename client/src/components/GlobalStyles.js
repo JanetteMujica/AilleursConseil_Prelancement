@@ -108,6 +108,7 @@ font-size: 18px;
 
 h1 {
   font-size: 2em;
+  font-weight: 700;
   color: var(--darkgrey);
 }
 h2,

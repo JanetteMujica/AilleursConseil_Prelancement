@@ -5,7 +5,6 @@ import Couche from '../assets/couche.png';
 import { Link } from 'react-router-dom';
 import Attribution from '../assets/attribution.png';
 import CreativeCommon from '../assets/common.png';
-import NonCommercial from '../assets/noCommercialUse.png';
 import { device } from '../components/MediaQueries';
 import emailjs from '@emailjs/browser';
 
@@ -96,12 +95,11 @@ const Footer = () => {
 				<GreenSection>
 					<LicenseSection>
 						<LicenseLogo
-							href='https://creativecommons.org/licenses/by-nc/4.0/deed.fr'
+							href='https://creativecommons.org/licenses/by/4.0/deed.fr'
 							target='_blank'
 						>
 							<img src={CreativeCommon} alt='cc' />
 							<img src={Attribution} alt='attribution' />
-							<img src={NonCommercial} alt='nc' />
 						</LicenseLogo>
 
 						<p>
@@ -111,7 +109,7 @@ const Footer = () => {
 								target='_blank'
 								rel='noreferrer'
 							>
-								CC BY-NC 4.0
+								CC BY 4.0
 							</a>
 						</p>
 

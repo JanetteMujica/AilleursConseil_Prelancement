@@ -1,4 +1,5 @@
 import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 import styled from 'styled-components';
 import { device } from '../components/MediaQueries';
 import { Link } from 'react-router-dom';
@@ -30,18 +31,33 @@ const Home = () => {
 				</RightSection>
 			</Wrapper>
 
-			<BdSection>
-				<img
-					src={BdOne}
-					alt="Tout le monde travaille en silos! Qu'est-ce qu'on peut faire?"
-				/>
-				<img src={BdTwo} alt='Facile! On démarre une communcauté de pratique' />
-				<img src={BdThree} alt='Bonne idée!' />
-				<img
-					src={BdFour}
-					alt="Oui, mais .. qu'est-ce qu'on faite pour que ça marche?"
-				/>
-			</BdSection>
+			<CarouselSection>
+				<Carousel slide={false} variant='dark'>
+					<Carousel.Item>
+						<img
+							src={BdOne}
+							alt="Tout le monde travaille en silos! Qu'est-ce qu'on peut faire?"
+						/>
+					</Carousel.Item>
+					<Carousel.Item>
+						<img
+							src={BdTwo}
+							alt='Facile! On démarre une communcauté de pratique'
+						/>
+					</Carousel.Item>
+
+					<Carousel.Item>
+						<img src={BdThree} alt='Bonne idée!' />
+					</Carousel.Item>
+
+					<Carousel.Item>
+						<img
+							src={BdFour}
+							alt="Oui, mais .. qu'est-ce qu'on faite pour que ça marche?"
+						/>
+					</Carousel.Item>
+				</Carousel>
+			</CarouselSection>
 		</>
 	);
 };
@@ -56,7 +72,7 @@ const Wrapper = styled.section`
 	padding-right: 1em;
 	gap: 1.5em;
 	align-items: flex-start;
-	margin-top: 13em;
+	margin-top: 11em;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -166,14 +182,10 @@ const Button = styled(Link)`
 	}
 `;
 
-const BdSection = styled.section`
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+const CarouselSection = styled.div`
 	margin-top: 4em;
-	gap: 1em;
-	padding-right: 1em;
-	padding-left: 1em;
+	margin-right: 1em;
+	margin-left: 1em;
 
 	@media ${device.tablet} {
 		padding-right: 2em;
@@ -206,6 +218,9 @@ const BdSection = styled.section`
 	}
 
 	img {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
 		width: 100%;
 		height: auto;
 
