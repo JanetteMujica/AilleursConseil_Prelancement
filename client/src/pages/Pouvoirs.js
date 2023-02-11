@@ -5,7 +5,7 @@ const Pouvoirs = () => {
 	return (
 		<>
 			<Wrapper>
-				<Titre>Réussir le démarrage d'une communauté de pratique</Titre>
+				<Titre>Pouvoirs patients</Titre>
 			</Wrapper>
 		</>
 	);
