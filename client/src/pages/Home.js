@@ -12,26 +12,30 @@ const Home = () => {
 	return (
 		<>
 			<Wrapper>
-				<Titre>ailleurs.</Titre>
+				<section>
+					<Titre>ailleurs.</Titre>
 
-				<Para>
-					À l'intersection de la recherche et du terrain, nous soutenons les
-					initiatives de praticiens, d'utilisateurs et de gestionnaires visant à
-					humaniser les services de santé et d'éducation.
-				</Para>
-				<Bold>
-					#allerailleurs #contenuouvert #donneesouvertes #gouvernancedescommuns
-					#innovationsociale
-				</Bold>
+					<Para>
+						À l'intersection de la recherche et du terrain, nous soutenons les
+						initiatives de praticiens, d'utilisateurs et de gestionnaires visant
+						à humaniser les services de santé et d'éducation.
+					</Para>
+					<Bold>
+						#allerailleurs #contenuouvert #donneesouvertes
+						#gouvernancedescommuns #innovationsociale
+					</Bold>
+				</section>
 
-				<Titre>Pouvoirs patients</Titre>
+				<section>
+					<Titre>Pouvoirs patients</Titre>
 
-				<Para>
-					Le système de santé doit comprendre, valoriser, et déployer la
-					diversité des pouvoirs patients.
-				</Para>
+					<Para>
+						Le système de santé a intérêt à comprendre, valoriser, et déployer
+						la diversité des pouvoirs patients.
+					</Para>
 
-				<Button to='/pouvoirs'>POUVOIRS PATIENTS</Button>
+					<Button to='/pouvoirs'>POUVOIRS PATIENTS</Button>
+				</section>
 
 				<CarouselSection>
 					<Carousel slide={false} variant='dark'>
