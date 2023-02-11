@@ -42,16 +42,6 @@ const NavBar = () => {
 					<SecondSection>
 						<Nav>
 							<NavLink
-								to='/programme'
-								style={({ isActive }) => ({
-									textDecoration: !isActive ? 'none' : 'underline',
-									textDecorationThickness: !isActive ? 'none' : '2px',
-								})}
-							>
-								<Page>programme</Page>
-							</NavLink>
-
-							<NavLink
 								to='/pouvoirs'
 								style={({ isActive }) => ({
 									textDecoration: !isActive ? 'none' : 'underline',
@@ -59,6 +49,16 @@ const NavBar = () => {
 								})}
 							>
 								<Page>pouvoirs</Page>
+							</NavLink>
+
+							<NavLink
+								to='/programme'
+								style={({ isActive }) => ({
+									textDecoration: !isActive ? 'none' : 'underline',
+									textDecorationThickness: !isActive ? 'none' : '2px',
+								})}
+							>
+								<Page>programme</Page>
 							</NavLink>
 
 							<NavLink

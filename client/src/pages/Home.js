@@ -12,6 +12,55 @@ const Home = () => {
 	return (
 		<>
 			<Wrapper>
+				<Titre>ailleurs.</Titre>
+
+				<Para>
+					À l'intersection de la recherche et du terrain, nous soutenons les
+					initiatives de praticiens, d'utilisateurs et de gestionnaires visant à
+					humaniser les services de santé et d'éducation.
+				</Para>
+				<Bold>
+					#allerailleurs #contenuouvert #donneesouvertes #gouvernancedescommuns
+					#innovationsociale
+				</Bold>
+
+				<Titre>Pouvoirs patients</Titre>
+
+				<Para>
+					Le système de santé doit comprendre, valoriser, et déployer la
+					diversité des pouvoirs patients.
+				</Para>
+
+				<Button to='/pouvoirs'>POUVOIRS PATIENTS</Button>
+
+				<CarouselSection>
+					<Carousel slide={false} variant='dark'>
+						<Carousel.Item>
+							<img
+								src={BdOne}
+								alt="Tout le monde travaille en silos! Qu'est-ce qu'on peut faire?"
+							/>
+						</Carousel.Item>
+						<Carousel.Item>
+							<img
+								src={BdTwo}
+								alt='Facile! On démarre une communcauté de pratique'
+							/>
+						</Carousel.Item>
+
+						<Carousel.Item>
+							<img src={BdThree} alt='Bonne idée!' />
+						</Carousel.Item>
+
+						<Carousel.Item>
+							<img
+								src={BdFour}
+								alt="Oui, mais .. qu'est-ce qu'on faite pour que ça marche?"
+							/>
+						</Carousel.Item>
+					</Carousel>
+				</CarouselSection>
+
 				<Titre>Réussir le démarrage d'une communauté de pratique</Titre>
 				<RightSection>
 					<Introduction>
@@ -30,34 +79,6 @@ const Home = () => {
 					<Button to='/programme'>APERÇU DU PROGRAMME</Button>
 				</RightSection>
 			</Wrapper>
-
-			<CarouselSection>
-				<Carousel slide={false} variant='dark'>
-					<Carousel.Item>
-						<img
-							src={BdOne}
-							alt="Tout le monde travaille en silos! Qu'est-ce qu'on peut faire?"
-						/>
-					</Carousel.Item>
-					<Carousel.Item>
-						<img
-							src={BdTwo}
-							alt='Facile! On démarre une communcauté de pratique'
-						/>
-					</Carousel.Item>
-
-					<Carousel.Item>
-						<img src={BdThree} alt='Bonne idée!' />
-					</Carousel.Item>
-
-					<Carousel.Item>
-						<img
-							src={BdFour}
-							alt="Oui, mais .. qu'est-ce qu'on faite pour que ça marche?"
-						/>
-					</Carousel.Item>
-				</Carousel>
-			</CarouselSection>
 		</>
 	);
 };
@@ -103,6 +124,8 @@ const Wrapper = styled.section`
 		gap: 2em;
 	}
 `;
+
+const Para = styled.div``;
 
 const Titre = styled.h1`
 	@media ${device.tablet} {
@@ -183,10 +206,6 @@ const Button = styled(Link)`
 `;
 
 const CarouselSection = styled.div`
-	margin-top: 4em;
-	margin-right: 1em;
-	margin-left: 1em;
-
 	@media ${device.tablet} {
 		padding-right: 2em;
 		padding-left: 2em;

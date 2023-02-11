@@ -11,16 +11,6 @@ const Equipe = () => {
 	return (
 		<>
 			<Wrapper>
-				<TitrePage>AILLEURS</TitrePage>
-				<Para>
-					Nous soutenons les initiatives de praticiens et d'utilisateurs visant
-					à humaniser les services de santé et d'éducation.
-				</Para>
-				<Para>
-					Nous voulons aller ailleurs en pensant hors des modèles établis pour
-					étendre l'horizon des possibles.
-				</Para>
-
 				<TitrePage>ÉQUIPE</TitrePage>
 				<LesBios>
 					<section>
