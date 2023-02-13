@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Janette from '../assets/janette.png';
 import Codes from '../assets/codes.png';
@@ -114,26 +113,6 @@ const Equipe = () => {
 						</LesLiens>
 					</section>
 				</LesBios>
-
-				<TitrePage>COMITÉ</TitrePage>
-				<Para>
-					Le programme
-					<Link to='/programme'>
-						<Italic> Réussir le démarrage d'une communauté de pratique </Italic>
-					</Link>
-					été conçu à l'aide d'un processus de coconstruction des connaissances.
-				</Para>
-				<Para>
-					Un comité consultatif composé de cinq personnes ayant une variété
-					d'expériences en lien avec des communautés de pratique dans le domaine
-					des soins de santé a été réuni.
-				</Para>
-
-				<Para>
-					Mathieu Bouchard a accompagné les membres de ce comité dans une série
-					de six séances ayant pour but de valider et enrichir les éléments de
-					contenu qui composent ce programme.
-				</Para>
 			</Wrapper>
 		</>
 	);
@@ -194,11 +173,6 @@ const LesBios = styled.div`
 	}
 `;
 
-const Italic = styled.span`
-	font-style: italic;
-	font-weight: bold;
-`;
-
 const TitrePage = styled.h1`
 	margin-top: 1em;
 	font-weight: 700;
@@ -229,10 +203,6 @@ const Statement = styled.div`
 `;
 
 const Bio = styled.div``;
-
-const Para = styled.div`
-	margin-bottom: 1em;
-`;
 
 const LesLiens = styled.section`
 	margin-top: 1em;

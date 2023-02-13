@@ -9,7 +9,9 @@ import Ceppp from '../../assets/ceppp.png';
 import Ruiss from '../../assets/ruiss.png';
 import Risuq from '../../assets/risuq.png';
 import Ssa from '../../assets/ssa.png';
+import heart from '../../assets/heart.png';
 import { titles } from '../../data';
+import { Link } from 'react-router-dom';
 
 const Programme = () => {
 	return (
@@ -74,7 +76,6 @@ const Programme = () => {
 						</tr>
 					</Table>
 				</Apropos>
-
 				<div>
 					{allModules.map((module) => {
 						const image = require(`../../assets/${module.imageSrcId}.png`);
@@ -109,44 +110,186 @@ const Programme = () => {
 									<TexteExplicatifSection2>
 										<SousTitre>OBJECTIF</SousTitre>
 										<div>{module.objectif}</div>
-										<Question>
+										{/* 										<Question>
 											{module.questions.map((question) => (
 												<li>{question}</li>
 											))}
-										</Question>
+										</Question> */}
 									</TexteExplicatifSection2>
 								</TexteExplicatif>
 							</ModuleSection>
 						);
 					})}
 				</div>
-				<SectionPartenaire>
-					<SousTitre>PARTENAIRES À LA CONCEPTION</SousTitre>
-					<PartenaireLogo>
-						<CepppLogo href='https://ceppp.ca/' target='_blank'>
-							<img src={Ceppp} />
-						</CepppLogo>
+				<Merci>
+					Merci
+					<img src={heart} />
+				</Merci>
+				<TitrePage>au comité consultatif</TitrePage>
+				<ParaPremier>
+					Le programme
+					<Link to='/programme'>
+						<Italic> Réussir le démarrage d'une communauté de pratique </Italic>
+					</Link>
+					été conçu à l'aide d'un processus de coconstruction des connaissances.
+				</ParaPremier>
+				<Para>
+					Un comité consultatif ayant une variété d'expériences en lien avec des
+					communautés de pratique dans le domaine des soins de santé a été
+					réuni.
+				</Para>
+				<Para>
+					<Link to='/equipe'>
+						<Italic>Mathieu Bouchard </Italic>
+					</Link>
+					a accompagné le comité dans une série de six séances ayant pour but de
+					valider et enrichir les éléments de contenu qui composent ce
+					programme.
+				</Para>
 
-						<SsaLogo href='https://ssaquebec.ca/' target='_blank'>
-							<img src={Ssa} />
-						</SsaLogo>
+				<Comite>
+					<MembreDiv>
+						<Membre>
+							<a
+								href='https://www.linkedin.com/in/samira-amil-a9b74b39/?originalSubdomain=ca'
+								target='_blank'
+								rel='noreferrer'
+							>
+								Samira Amil
+							</a>
+						</Membre>
+						<TitreRouge>MÉDECIN GÉNÉRALISTE ET CODIRECTRICE</TitreRouge>
+						<TitreNoir>SSA RUISS Université Laval</TitreNoir>
+					</MembreDiv>
+					<MembreDiv>
+						<Membre>
+							<a
+								href='https://ceppp.ca/team/sylvain-bedard/'
+								target='_blank'
+								rel='noreferrer'
+							>
+								Sylvain Bédard
+							</a>
+						</Membre>
+						<TitreRouge>PATIENT COORDONATEUR, CHARGÉ DE PROJET</TitreRouge>
+						<TitreNoir>CEPPP</TitreNoir>
+					</MembreDiv>
+					<MembreDiv>
+						<Membre>
+							<a
+								href='https://www.linkedin.com/in/st%C3%A9phane-dubuc-9706449/?originalSubdomain=ca'
+								target='_blank'
+								rel='noreferrer'
+							>
+								Stéphane Dubuc
+							</a>
+						</Membre>
+						<TitreRouge>
+							COORDONNATEUR DES ACTIVITÉS DE PERTINENCE CLINIQUE
+						</TitreRouge>
+						<TitreNoir>MSSS</TitreNoir>
+					</MembreDiv>
+					<MembreDiv>
+						<Membre>
+							<a
+								href='https://ceppp.ca/team/myriam-fournier-tombs/'
+								target='_blank'
+								rel='noreferrer'
+							>
+								Myriam Fournier-Tombs
+							</a>
+						</Membre>
+						<TitreRouge>CONSEILLÈRE STRATÉGIQUE</TitreRouge>
+						<TitreNoir>CEPPP</TitreNoir>
+					</MembreDiv>
+					<MembreDiv>
+						<Membre>
+							<a
+								href='https://www.linkedin.com/in/marcdanielfraser/?originalSubdomain=ca'
+								target='_blank'
+								rel='noreferrer'
+							>
+								Marc Fraser
+							</a>
+						</Membre>
+						<TitreRouge>CO-DIRECTEUR EXÉCUTIF</TitreRouge>
+						<TitreNoir>RISUQ</TitreNoir>
+					</MembreDiv>
 
-						<RisuqLogo href='https://risuq.uquebec.ca/' target='_blank'>
-							<img src={Risuq} />
-						</RisuqLogo>
+					<MembreDiv>
+						<Membre>
+							<a
+								href='https://www.linkedin.com/in/marcdanielfraser/?originalSubdomain=ca'
+								target='_blank'
+								rel='noreferrer'
+							>
+								Marie-Hélène Vaillancourt
+							</a>
+						</Membre>
+						<TitreRouge>CODIRECTRICE EXÉCUTIVE</TitreRouge>
+						<TitreNoir>RISUQ</TitreNoir>
+					</MembreDiv>
+				</Comite>
 
-						<RuissLogo href='https://ruisss.umontreal.ca/' target='_blank'>
-							<img src={Ruiss} />
-						</RuissLogo>
-					</PartenaireLogo>
+				<Merci>
+					Merci
+					<img src={heart} />
+				</Merci>
+				<TitrePage>à nos collaborateurs</TitrePage>
 
-					<SousTitre>MERCI À NOS COLLABORATEURS</SousTitre>
-					<Participants>
-						Myriam Fournier-Tombs, Caroline Wong, Sylvain Bédard, Samira Amil,
-						Audrey L'Espérance, Marc Fraser, Marie-Hélène Vaillancourt et
-						Stéphane Dubuc
-					</Participants>
-				</SectionPartenaire>
+				<Comite>
+					<MembreDiv>
+						<Membre>
+							<a
+								href='https://ceppp.ca/team/audrey-lesperance/'
+								target='_blank'
+								rel='noreferrer'
+							>
+								Audrey L'Espérance
+							</a>
+						</Membre>
+						<TitreRouge>
+							ASSOCIÉ DE RECHERCHE ET RESPONSABLE SCIENTIFIQUE
+						</TitreRouge>
+						<TitreNoir>CEPPP</TitreNoir>
+					</MembreDiv>
+
+					<MembreDiv>
+						<Membre>
+							<a
+								href='https://ceppp.ca/team/caroline-wong/'
+								target='_blank'
+								rel='noreferrer'
+							>
+								Caroline Wong
+							</a>
+						</Membre>
+						<TitreRouge>DIRECTRICE EXÉCUTIVE</TitreRouge>
+						<TitreNoir>CEPPP</TitreNoir>
+					</MembreDiv>
+				</Comite>
+				<Merci>
+					Merci
+					<img src={heart} />
+				</Merci>
+				<TitrePage>à nos partenaires</TitrePage>
+				<PartenaireLogo>
+					<CepppLogo href='https://ceppp.ca/' target='_blank'>
+						<img src={Ceppp} />
+					</CepppLogo>
+
+					<SsaLogo href='https://ssaquebec.ca/' target='_blank'>
+						<img src={Ssa} />
+					</SsaLogo>
+
+					<RisuqLogo href='https://risuq.uquebec.ca/' target='_blank'>
+						<img src={Risuq} />
+					</RisuqLogo>
+
+					<RuissLogo href='https://ruisss.umontreal.ca/' target='_blank'>
+						<img src={Ruiss} />
+					</RuissLogo>
+				</PartenaireLogo>
 			</Wrapper>
 		</>
 	);
@@ -247,6 +390,20 @@ const Wrapper = styled.section`
 		padding-right: 20em;
 		margin-top: 14em;
 	}
+`;
+
+const Italic = styled.span`
+	font-style: italic;
+	font-weight: bold;
+`;
+
+const Para = styled.div`
+	margin-bottom: 1em;
+`;
+
+const ParaPremier = styled.div`
+	margin-top: 1.5em;
+	margin-bottom: 1em;
 `;
 
 const TitreSection = styled.section`
@@ -434,6 +591,47 @@ const Question = styled.ul`
 	}
 `;
 
+const Merci = styled.div`
+	margin-top: 1.5em;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 4em;
+	color: var(--darkgrey);
+	img {
+		margin-left: 0.2em;
+		width: 70px;
+		height: auto;
+	}
+`;
+
+const TitreRouge = styled.div`
+	color: var(--red);
+	font-size: 0.8em;
+	font-weight: 700;
+`;
+
+const TitreNoir = styled.div`
+	color: var(--darkgrey);
+	font-size: 0.8em;
+	font-weight: 700;
+`;
+
+const Comite = styled.section`
+	margin-top: 1.5em;
+	display: flex;
+	flex-direction: row;
+	gap: 1em;
+	flex-wrap: wrap;
+`;
+
+const MembreDiv = styled.h2`
+	width: 255px;
+`;
+
+const Membre = styled.h2`
+	font-weight: 700;
+	font-size: 1.4em;
+`;
+
 const SectionPartenaire = styled.div`
 	background-color: #fada80;
 	padding-top: 3em;
@@ -455,6 +653,7 @@ const SectionPartenaire = styled.div`
 const PartenaireLogo = styled.div`
 	display: flex;
 	flex-direction: column;
+	margin-top: 1em;
 
 	@media ${device.tablet} {
 		flex-direction: row;
@@ -472,8 +671,6 @@ const CepppLogo = styled.a`
 		margin-top: 2em;
 		width: 280px;
 		height: auto;
-		padding-left: 1em;
-		padding-right: 1em;
 
 		@media ${device.laptop} {
 			width: 400px;
@@ -486,8 +683,6 @@ const SsaLogo = styled.a`
 		margin-top: 2em;
 		width: 230px;
 		height: auto;
-		padding-left: 1em;
-		padding-right: 1em;
 
 		@media ${device.laptop} {
 			width: 300px;
@@ -498,7 +693,6 @@ const SsaLogo = styled.a`
 const RisuqLogo = styled.a`
 	img {
 		margin-top: 1em;
-		padding-left: 0.5em;
 		width: 180px;
 		height: auto;
 
@@ -514,18 +708,9 @@ const RuissLogo = styled.a`
 		margin-bottom: 2em;
 		width: 240px;
 		height: auto;
-		padding-left: 0.5em;
 
 		@media ${device.laptop} {
 			width: 280px;
 		}
-	}
-`;
-
-const Participants = styled.p`
-	margin-top: 1em;
-
-	@media ${device.laptop} {
-		max-width: 800px;
 	}
 `;

@@ -35,18 +35,30 @@ const Module = () => {
 					const image = require(`../../assets/${module.imageSrcId}.png`);
 					if (module.title === title)
 						return (
-							<ColorSection style={{ backgroundColor: module.couleur }}>
-								<ModuleSection>
-									<img src={image} alt={module.module} />
-									<ModuleTitre>
-										<Numero>
-											<Id>{module.id}.</Id>
-											<Titre> {module.module}</Titre>
-										</Numero>
-										{/* 	<SousTitre>Contenu à venir</SousTitre> */}
-									</ModuleTitre>
-								</ModuleSection>
-							</ColorSection>
+							<>
+								<ColorSection style={{ backgroundColor: module.couleur }}>
+									<ModuleSection>
+										<img src={image} alt={module.module} />
+										<ModuleTitre>
+											<Numero>
+												<Id>{module.id}.</Id>
+												<Titre> {module.module}</Titre>
+											</Numero>
+											{/* 	<SousTitre>Contenu à venir</SousTitre> */}
+										</ModuleTitre>
+									</ModuleSection>
+								</ColorSection>
+
+								<TexteExplicatifSection>
+									<SousTitre>OBJECTIF</SousTitre>
+									<div>{module.objectif}</div>
+									<Question>
+										{module.questions.map((question) => (
+											<li>{question}</li>
+										))}
+									</Question>
+								</TexteExplicatifSection>
+							</>
 						);
 				})}
 			</div>
@@ -176,12 +188,28 @@ const ModuleSection = styled.section`
 		}
 	}
 `;
+const TexteExplicatifSection = styled.section``;
+
+const SousTitre = styled.p`
+	margin-top: 1em;
+	font-size: 1em;
+	font-weight: 700;
+`;
+
+const Question = styled.ul`
+	margin-top: 1em;
+	padding-left: 1em;
+	color: var(--lightgrey);
+	font-style: italic;
+	list-style-type: disc;
+
+	li {
+	}
+`;
 
 const ColorSection = styled.div``;
 
 const ModuleTitre = styled.div``;
-
-const SousTitre = styled.div``;
 
 const Numero = styled.h1`
 	color: #fffaea;

@@ -117,7 +117,8 @@ const Footer = () => {
 							<Bold>attribution: </Bold>
 							<Link to='/programme'>
 								Réussir le démarrage d'une communauté de pratique
-							</Link>
+							</Link>{' '}
+							et/ou <Link to='/pouvoirs'>Pouvoirs patients</Link>
 						</p>
 
 						<p>
