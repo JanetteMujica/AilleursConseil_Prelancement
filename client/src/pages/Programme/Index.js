@@ -29,7 +29,7 @@ const Programme = () => {
 						</NavLink>
 					);
 				})}
-			</ModuleNav>{' '}
+			</ModuleNav>
 			<Wrapper>
 				<TitreSection>
 					<TitrePage>

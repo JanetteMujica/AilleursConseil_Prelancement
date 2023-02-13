@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { allModules } from '../../data';
 import styled from 'styled-components';
 import { device } from '../../components/MediaQueries';
+import { titles } from '../../data';
+import { NavLink } from 'react-router-dom';
 
 const Module = () => {
 	const { title } = useParams();
@@ -11,6 +13,23 @@ const Module = () => {
 
 	return (
 		<>
+			<BeigeModuleNav></BeigeModuleNav>
+			<ModuleNav>
+				{titles.map((title) => {
+					return (
+						<NavLink
+							key={title}
+							to={`/programme/${title}`}
+							style={({ isActive }) => ({
+								fontWeight: !isActive ? '400' : '700',
+							})}
+						>
+							<div>{title}</div>
+						</NavLink>
+					);
+				})}
+			</ModuleNav>
+
 			<div>
 				{allModules.map((module) => {
 					const image = require(`../../assets/${module.imageSrcId}.png`);
@@ -36,6 +55,71 @@ const Module = () => {
 };
 
 export default Module;
+
+const BeigeModuleNav = styled.div`
+	background-color: #fffaea;
+	position: fixed;
+	top: 50px;
+	z-index: 200;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+
+	@media ${device.mobileS} {
+		height: 125px;
+	}
+
+	@media ${device.mobileM} {
+		height: 125px;
+	}
+
+	@media ${device.mobileL} {
+		height: 125px;
+	}
+
+	@media ${device.tablet} {
+		height: 85px;
+	}
+
+	@media ${device.laptop} {
+		height: 95px;
+	}
+
+	@media ${device.laptopL} {
+	}
+
+	@media ${device.desktop} {
+	} ;
+`;
+
+const ModuleNav = styled.a`
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	font-size: 0.8em;
+	color: var(--lightgrey);
+	margin-bottom: 1em;
+	z-index: 10000;
+	margin-left: 1em;
+	margin-right: 1em;
+	position: fixed;
+	top: 120px;
+
+	@media ${device.mobileM} {
+	}
+
+	@media ${device.mobileL} {
+	}
+
+	@media ${device.tablet} {
+	}
+
+	@media ${device.tablet} {
+		margin-top: 60px;
+		padding-right: 7.5em;
+	}
+`;
 
 const ModuleSection = styled.section`
 	margin-top: 13em;

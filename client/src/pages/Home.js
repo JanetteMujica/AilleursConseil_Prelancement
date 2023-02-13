@@ -7,35 +7,82 @@ import BdOne from '../assets/Bd1.png';
 import BdTwo from '../assets/Bd2.png';
 import BdThree from '../assets/Bd3.png';
 import BdFour from '../assets/Bd4.png';
+import echappement from '../assets/echappement.png';
+import denonciation from '../assets/denonciation.png';
+import collaboration from '../assets/collaboration.png';
+import cinq from '../assets/cinq.png';
+import mainliee from '../assets/mainliee.png';
+import ferveur from '../assets/ferveur.png';
+import bEchappement from '../assets/black_echappement.png';
+import bDenonciation from '../assets/black_denonciation.png';
+import bCollaboration from '../assets/black_collaboration.png';
+import bAcquiescement from '../assets/black_acquiescement.png';
+import bFerveur from '../assets/black_ferveur.png';
 
 const Home = () => {
 	return (
 		<>
 			<Wrapper>
-				<section>
-					<Titre>ailleurs.</Titre>
+				<Titre>ailleurs.</Titre>
 
-					<Para>
-						À l'intersection de la recherche et du terrain, nous soutenons les
-						initiatives de praticiens, d'utilisateurs et de gestionnaires visant
-						à humaniser les services de santé et d'éducation.
-					</Para>
-					<Bold>
-						#allerailleurs #contenuouvert #donneesouvertes
-						#gouvernancedescommuns #innovationsociale
-					</Bold>
-				</section>
+				<Para>
+					À l'intersection du terrain et de la recherche, nous soutenons les
+					initiatives de praticiens, utilisateurs et gestionnaires visant à
+					humaniser les services de santé et d'éducation.
+				</Para>
+				<Bold>
+					#allerailleurs #contenuouvert #donneesouvertes #gouvernancedescommuns
+					#innovationsociale
+				</Bold>
 
-				<section>
-					<Titre>Pouvoirs patients</Titre>
+				<TitreSuivant>Pouvoirs patients</TitreSuivant>
 
-					<Para>
-						Le système de santé a intérêt à comprendre, valoriser, et déployer
-						la diversité des pouvoirs patients.
-					</Para>
+				<Para>
+					Le système de santé a intérêt à comprendre, valoriser, et déployer la
+					diversité des pouvoirs patients.
+				</Para>
 
-					<Button to='/pouvoirs'>POUVOIRS PATIENTS</Button>
-				</section>
+				<PouvoirsSectionLogo>
+					<FirstLine>
+						<img
+							src={echappement}
+							alt='échappement'
+							onMouseOver={(e) => (e.currentTarget.src = bEchappement)}
+							onMouseOut={(e) => (e.currentTarget.src = echappement)}
+						/>
+					</FirstLine>
+					<SecondLine>
+						<img
+							src={denonciation}
+							alt='dénonciation'
+							onMouseOver={(e) => (e.currentTarget.src = bDenonciation)}
+							onMouseOut={(e) => (e.currentTarget.src = denonciation)}
+						/>
+						<img
+							src={collaboration}
+							alt='collaboration'
+							onMouseOver={(e) => (e.currentTarget.src = bCollaboration)}
+							onMouseOut={(e) => (e.currentTarget.src = collaboration)}
+						/>
+					</SecondLine>
+					<ThirdLine>
+						<img src={cinq} alt='cinq' />
+						<img
+							src={mainliee}
+							alt='acquiescement'
+							onMouseOver={(e) => (e.currentTarget.src = bAcquiescement)}
+							onMouseOut={(e) => (e.currentTarget.src = mainliee)}
+						/>
+						<img
+							src={ferveur}
+							alt='ferveur'
+							onMouseOver={(e) => (e.currentTarget.src = bFerveur)}
+							onMouseOut={(e) => (e.currentTarget.src = ferveur)}
+						/>
+					</ThirdLine>
+				</PouvoirsSectionLogo>
+
+				<Button to='/pouvoirs'>POUVOIRS PATIENTS</Button>
 
 				<CarouselSection>
 					<Carousel slide={false} variant='dark'>
@@ -150,6 +197,27 @@ const Titre = styled.h1`
 	}
 `;
 
+const TitreSuivant = styled.h1`
+	margin-top: 1.5em;
+
+	@media ${device.tablet} {
+		width: 290px;
+	}
+	@media ${device.laptop} {
+		font-size: 1.6em;
+	}
+
+	@media ${device.laptopL} {
+		width: 420px;
+		font-size: 2em;
+	}
+
+	@media ${device.desktop} {
+		width: 700px;
+		font-size: 3em;
+	}
+`;
+
 const RightSection = styled.div`
 	margin-bottom: 1em;
 	@media ${device.tablet} {
@@ -195,6 +263,25 @@ const Bold = styled.span`
 	font-weight: 700;
 `;
 
+const PouvoirsSectionLogo = styled.section`
+	img {
+		width: 80px;
+	}
+
+	div {
+		display: flex;
+		gap: 1em;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+`;
+
+const FirstLine = styled.div``;
+
+const SecondLine = styled.div``;
+
+const ThirdLine = styled.div``;
+
 const Button = styled(Link)`
 	border: none;
 	background-color: var(--red);
@@ -210,6 +297,7 @@ const Button = styled(Link)`
 `;
 
 const CarouselSection = styled.div`
+	margin-top: 4em;
 	@media ${device.tablet} {
 		padding-right: 2em;
 		padding-left: 2em;

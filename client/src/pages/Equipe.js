@@ -17,7 +17,7 @@ const Equipe = () => {
 						<img
 							src={Janette}
 							alt='Logo'
-							onMouseOver={(e) => (e.currentTarget.src = Codes)}
+							onMouseOver={(e) => (e.currentTarget.src = Famille)}
 							onMouseOut={(e) => (e.currentTarget.src = Janette)}
 						/>
 
