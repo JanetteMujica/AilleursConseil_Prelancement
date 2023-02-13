@@ -105,7 +105,7 @@ const Footer = () => {
 						<p>
 							<Bold>license: </Bold>
 							<a
-								href='https://creativecommons.org/licenses/by-nc/4.0/deed.fr'
+								href='https://creativecommons.org/licenses/by/4.0/deed.fr'
 								target='_blank'
 								rel='noreferrer'
 							>
